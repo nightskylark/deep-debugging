@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Debugging</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#about">About the Show</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#episodes">Episodes</a></li>
+                <li><a href="#gallery">Concept arts</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="language-dropdown">
+                <button class="dropbtn">
+                    <img src="images/globe-icon.png" alt="Globe Icon" class="globe-icon">
+                </button>
+                <div class="dropdown-content">
+                    <a href="index.html" class="active"><img src="images/flag-usa.png" alt="English" class="flag-icon"> English</a>
+                    <a href="index-ru.html"><img src="images/flag-russia.png" alt="Russian" class="flag-icon"> Русский</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <header>
+        <div class="container">
+            <img class="logo" src="./images/logo.png">
+            <!-- <h1>Deep Debugging</h1> -->
+            <p>Welcome to the Official Website of Deep Debugging Animated Series</p>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About the Show</h2>
+            <p><strong>Introduction:</strong> <em>Deep Debugging</em> is an adult animated comedy series that dives into the chaotic and humorous world of developers working on a simulation of our universe. Follow the antics of a quirky team as they navigate through digital glitches, unexpected bugs, and the everyday absurdities of debugging.</p>
+            <p><strong>Plot:</strong> In a world where every line of code can lead to chaos, <em>Deep Debugging</em> takes you on a rollercoaster ride through a simulated universe that’s more unpredictable than reality itself. Our heroes venture into the simulation to fix bugs, only to find themselves caught in hilarious situations that challenge their coding skills and sanity.</p>
+        </div>
+    </section>
+
+    <section id="characters" class="section">
+        <div class="container">
+            <h2>Meet the Characters</h2>
+            <div class="character-gallery">
+                <div class="character-card popup-target" data-poup-id="j">
+                    <img src="images/j-concept.png" alt="J" class="character-image">
+                    <div class="character-description">
+                        <h3>J</h3>
+                        <!-- <p>A young, awkward, and inexperienced developer with an eccentric hairstyle. Jay approaches his work with great enthusiasm and is eager to prove himself. However, due to his limited life experience, he struggles with social norms and often misinterprets what is expected of him.</p> -->
+                    </div>
+                </div>
+                <div class="character-card popup-target" data-poup-id="tom">
+                    <img src="images/tom-concept.png" alt="Tom" class="character-image">
+                    <div class="character-description">
+                        <h3>Tom</h3>
+                        <!-- <p>A senior developer and Jay's mentor, Tom is a super-professional with the charisma of a weary rock star. He is brutally honest and somewhat self-assured, but he genuinely cares about his team members and takes his mentorship role very seriously.</p> -->
+                    </div>
+                </div>
+                <div class="character-card popup-target" data-poup-id="polly">
+                    <img src="images/polly-concept.png" alt="Polly" class="character-image">
+                    <div class="character-description">
+                        <h3>Polly</h3>
+                        <!-- <p>A developer with an intriguing geeky appearance, Polly is known for her seriousness and strong sense of responsibility.</p> -->
+                    </div>
+                </div>
+                <div class="character-card popup-target" data-poup-id="archie">
+                    <img src="images/archie-concept.png" alt="Archie" class="character-image">
+                    <div class="character-description">
+                        <h3>Archie</h3>
+                        <!-- <p>A developer with a cheerful and full-figured presence, Archie is a constant jokester who always has a smile on his face.</p> -->
+                    </div>
+                </div>
+                <div class="character-card popup-target" data-poup-id="boss">
+                    <img src="images/boss-concept.png" alt="Boss" class="character-image">
+                    <div class="character-description">
+                        <h3>Boss</h3>
+                        <!-- <p></p> -->
+                    </div>
+                </div>
+                <div class="character-card popup-target" data-poup-id="maximo">
+                    <img src="images/maximo.png" alt="Maximo" class="character-image">
+                    <div class="character-description">
+                        <h3>Maximo</h3>
+                        <!-- <p>A creative individual, Maximo is eccentric and often lost in his own world.</p> -->
+                    </div>
+                </div>
+                <div class="character-card popup-target" data-poup-id="helen">
+                    <img src="images/helen.png" alt="Helen" class="character-image">
+                    <div class="character-description">
+                        <h3>Helen</h3>
+                        <!-- <p></p> -->
+                    </div>
+                </div>
+                <div class="character-card popup-target" data-poup-id="elon">
+                    <img src="images/elon.png" alt="Elon Musk" class="character-image">
+                    <div class="character-description">
+                        <h3>Elon Musk</h3>
+                        <!-- <p></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Popups for each character -->
+    <div id="j-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/j-concept.png" alt="J" class="popup-image">
+            <h3>J</h3>
+            <p>A young, awkward, and inexperienced developer. J approaches his work with great enthusiasm and is eager to prove himself. However, due to his limited life experience, he struggles with social norms and often misinterprets what is expected of him.</p>
+        </div>
+    </div>
+    
+    <div id="tom-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/tom-concept.png" alt="Tom" class="popup-image">
+            <h3>Tom</h3>
+            <p>A senior developer and Jay's mentor, Tom is a super-professional with the charisma of a weary rock star. He is brutally honest and somewhat self-assured, but he genuinely cares about his team members and takes his mentorship role very seriously.</p>
+        </div>
+    </div>
+    
+    <div id="polly-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/polly-concept.png" alt="Polly" class="popup-image">
+            <h3>Polly</h3>
+            <p>A developer with an intriguing geeky appearance, Polly is known for her seriousness and strong sense of responsibility.</p>
+        </div>
+    </div>
+    
+    <div id="archie-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/archie-concept.png" alt="Archie" class="popup-image">
+            <h3>Archie</h3>
+            <p>A developer with a cheerful and full-figured presence, Archie is a constant jokester who always has a smile on his face.</p>
+        </div>
+    </div>
+
+    <div id="boss-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/boss-concept.png" alt="Boss" class="popup-image">
+            <h3>Boss</h3>
+            <p>The founder of the UniDev company, the Boss is a visionary who wrote the first version of the simulation in his garage in just one week. He is known for making bold and expressive management decisions and has an unshakeable belief in his limitless genius. However, he rarely acknowledges his mistakes.</p>
+        </div>
+    </div>
+
+    <div id="maximo-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/maximo.png" alt="Maximo" class="popup-image">
+            <h3>Maximo</h3>
+            <p>Designer. A creative individual, Maximo is eccentric and often lost in his own world.</p>
+        </div>
+    </div>
+
+    <div id="helen-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/helen.png" alt="Helen" class="popup-image">
+            <h3>Helen</h3>
+            <p>As an HR manager, Helen is friendly and has a keen understanding of people. She enjoys giving advice and helping others navigate their challenges.</p>
+        </div>
+    </div>
+
+    <div id="elon-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/elon.png" alt="Elon Musk" class="popup-image">
+            <h3>Elon Musk</h3>
+            <p>A high-profile businessman and one of the users of the simulation, Elon Musk leverages the simulation to test his innovative ideas and for personal enjoyment.</p>
+        </div>
+    </div>
+
+    <section id="episodes" class="section">
+        <div class="container">
+            <h2>Episodes</h2>
+            <div class="episode">
+                <img src="./images/episode1.png" alt="Episode 1" class="episode-image">
+                <div class="episode-content">
+                    <h3>Episode 1: First Commit</h3>
+                    <p>A young and inexperienced programmer, J, dives into a computer simulation of our world to locate the patient zero of a computer virus threatening humanity, all while trying to fix his mistake and avoid getting fired on his first day.</p>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Concept arts</h2>
+            <div class="gallery">
+                <img src="./images/office.png" alt="UniDev Office Concept" class="popup-target" data-poup-id="office">
+                <img src="./images/dd-room.png" alt="Deep Debugging Room Concept" class="popup-target" data-poup-id="dd-room">
+                <img src="./images/market.png" alt="Market Concept" class="popup-target" data-poup-id="market">
+                <img src="./images/running-tom.png" alt="Running Tom Concept" class="popup-target" data-poup-id="running">
+                <img src="./images/zombies.png" alt="Zombies Fight Concept" class="popup-target" data-poup-id="zombies">
+            </div>
+        </div>
+    </section>
+    <div id="office-popup" class="dd-popup">
+        <span class="close">&times;</span>
+        <img src="images/office.png" class="popup-image">
+    </div>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <ul>
+                <li><a href="https://t.me/deepdebugging" target="_blank">
+                    <img src="./images/telegram.ico" alt="Telegram Icon" class="icon">Telegram: https://t.me/deepdebugging
+                </a></li>
+                <li><a href="mailto:j@deepdebugging.world" target="_blank">
+                    <img src="./images/email.ico" alt="Email Icon" class="icon">Email: j@deepdebugging.world
+                </a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Copyright © 2024 Deep Debugging - All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./popup.js"></script>
+    <script>
+        document.querySelector('.dropbtn').addEventListener('click', function() {
+            document.querySelector('.dropdown-content').classList.toggle('show');
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn') && !event.target.matches('.globe-icon')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        // // JavaScript for closing dropdown when clicking outside
+        // window.onclick = function(event) {
+        //     if (!event.target.matches('.dropbtn')) {
+        //         var dropdowns = document.getElementsByClassName("dropdown-content");
+        //         for (var i = 0; i < dropdowns.length; i++) {
+        //             var openDropdown = dropdowns[i];
+        //             if (openDropdown.classList.contains('show')) {
+        //                 openDropdown.classList.remove('show');
+        //             }
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глубокая Отладка</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Contrail+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#about">О сериале</a></li>
+                <li><a href="#characters">Персонажи</a></li>
+                <li><a href="#episodes">Эпизоды</a></li>
+                <li><a href="#gallery">Концепт-арты</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <div class="language-dropdown">
+                <button class="dropbtn">
+                    <img src="images/globe-icon.png" alt="Иконка глобуса" class="globe-icon">
+                </button>
+                <div class="dropdown-content">
+                    <a href="index.html"><img src="images/flag-usa.png" alt="Английский" class="flag-icon"> English</a>
+                    <a href="index-ru.html" class="active"><img src="images/flag-russia.png" alt="Русский" class="flag-icon"> Русский</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <header>
+        <div class="container">
+            <img class="logo" src="./images/logo.png">
+            <p>Добро пожаловать на официальный сайт анимационного сериала "Глубокая Отладка"</p>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>О сериале</h2>
+            <p><strong>Введение:</strong> <em>Глубокая Отладка</em> — это взрослый анимационный комедийный сериал, который погружает в хаотичный и юмористический мир разработчиков, работающих над симуляцией нашей вселенной. Следите за проделками причудливой команды, которая преодолевает цифровые сбои, неожиданные баги и повседневные абсурды отладки.</p>
+            <p><strong>Сюжет:</strong> В мире, где каждая строка кода может привести к хаосу, <em>Глубокая Отладка</em> отправляет вас на американские горки через симулированную вселенную, которая более непредсказуема, чем сама реальность. Наши герои отправляются в симуляцию, чтобы исправить баги, но попадают в комичные ситуации, которые бросают вызов их навыкам кодирования и здравомыслию.</p>
+        </div>
+    </section>
+
+    <section id="characters" class="section">
+        <div class="container">
+            <h2>Познакомьтесь с персонажами</h2>
+            <div class="character-gallery">
+                <div class="character-card popup-target" data-poup-id="j">
+                    <img src="images/j-concept.png" alt="Джей" class="character-image">
+                    <div class="character-description">
+                        <h3>Джей</h3>
+                    </div>
+                </div>
+                <div class="character-card popup-target" data-poup-id="tom">
+                    <img src="images/tom-concept.png" alt="Том" class="character-image">
+                    <div class="character-description">
+                        <h3>Том</h3>
+                    </div>
+                </div>
+                <div class="character-card popup-target" data-poup-id="polly">
+                    <img src="images/polly-concept.png" alt="Полли" class="character-image">
+                    <div class="character-description">
+                        <h3>Полли</h3>
+                    </div>
+                </div>
+                <div class="character-card popup-target" data-poup-id="archie">
+                    <img src="images/archie-concept.png" alt="Арчи" class="character-image">
+                    <div class="character-description">
+                        <h3>Арчи</h3>
+                    </div>
+                </div>
+                <div class="character-card popup-target" data-poup-id="boss">
+                    <img src="images/boss-concept.png" alt="Босс" class="character-image">
+                    <div class="character-description">
+                        <h3>Босс</h3>
+                    </div>
+                </div>
+                <div class="character-card popup-target" data-poup-id="maximo">
+                    <img src="images/maximo.png" alt="Максимо" class="character-image">
+                    <div class="character-description">
+                        <h3>Максимо</h3>
+                    </div>
+                </div>
+                <div class="character-card popup-target" data-poup-id="helen">
+                    <img src="images/helen.png" alt="Хелен" class="character-image">
+                    <div class="character-description">
+                        <h3>Хелен</h3>
+                    </div>
+                </div>
+                <div class="character-card popup-target" data-poup-id="elon">
+                    <img src="images/elon.png" alt="Илон Маск" class="character-image">
+                    <div class="character-description">
+                        <h3>Илон Маск</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Popups for each character -->
+    <div id="j-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/j-concept.png" alt="Джей" class="popup-image">
+            <h3>Джей</h3>
+            <p>Молодой, неловкий и неопытный разработчик. Джей подходит к своей работе с большим энтузиазмом и стремится доказать свою значимость. Однако, из-за ограниченного жизненного опыта, он испытывает трудности с социальными нормами и часто неправильно интерпретирует, что от него ожидается.</p>
+        </div>
+    </div>
+    
+    <div id="tom-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/tom-concept.png" alt="Том" class="popup-image">
+            <h3>Том</h3>
+            <p>Старший разработчик и наставник Джея, Том - суперпрофессионал с харизмой усталой рок-звезды. Он безжалостно честен и в чем-то самоуверен, но искренне заботится о своих сотрудниках и очень серьезно относится к своей наставнической роли.</p>
+        </div>
+    </div>
+    
+    <div id="polly-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/polly-concept.png" alt="Полли" class="popup-image">
+            <h3>Полли</h3>
+            <p>Разработчик с интригующим гиковским обликом, Полли известна своей серьезностью и сильным чувством ответственности.</p>
+        </div>
+    </div>
+    
+    <div id="archie-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/archie-concept.png" alt="Арчи" class="popup-image">
+            <h3>Арчи</h3>
+            <p>Разработчик с веселым и полноватым обликом, Арчи - постоянный шутник, у которого всегда на лице улыбка.</p>
+        </div>
+    </div>
+
+    <div id="boss-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/boss-concept.png" alt="Босс" class="popup-image">
+            <h3>Босс</h3>
+            <p>Основатель компании UniDev, Босс - это визионер, который написал первую версию симуляции в своем гараже за одну неделю. Он известен принятием смелых и выразительных управленческих решений и имеет непоколебимую веру в свою безграничную гениальность. Однако он редко признает свои ошибки.</p>
+        </div>
+    </div>
+
+    <div id="maximo-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/maximo.png" alt="Максимо" class="popup-image">
+            <h3>Максимо</h3>
+            <p>Дизайнер. Творческая личность, Максимо эксцентричен и часто погружен в свой собственный мир.</p>
+        </div>
+    </div>
+
+    <div id="helen-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/helen.png" alt="Хелен" class="popup-image">
+            <h3>Хелен</h3>
+            <p>Как HR-менеджер, Хелен дружелюбна и обладает тонким пониманием людей. Она любит давать советы и помогать другим справляться с их проблемами.</p>
+        </div>
+    </div>
+
+    <div id="elon-popup" class="dd-popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="images/elon.png" alt="Илон Маск" class="popup-image">
+            <h3>Илон Маск</h3>
+            <p>Известный бизнесмен и один из пользователей симуляции, Илон Маск использует симуляцию для тестирования своих инновационных идей и личного удовольствия.</p>
+        </div>
+    </div>
+
+    <section id="episodes" class="section">
+        <div class="container">
+            <h2>Эпизоды</h2>
+            <div class="episode">
+                <img src="./images/episode1.png" alt="Эпизод 1" class="episode-image">
+                <div class="episode-content">
+                    <h3>Эпизод 1: Первый Коммит</h3>
+                    <p>Молодой и неопытный программист Джей погружается в компьютерную симуляцию нашего мира, чтобы найти нулевого пациента компьютерного вируса, угрожающего человечеству, одновременно пытаясь исправить свою ошибку и не быть уволенным в свой первый день.</p>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Концепт-арты</h2>
+            <div class="gallery">
+                <img src="./images/office.png" alt="Концепт офиса UniDev" class="popup-target" data-poup-id="office">
+                <img src="./images/dd-room.png" alt="Концепт комнаты Deep Debugging" class="popup-target" data-poup-id="dd-room">
+                <img src="./images/market.png" alt="Концепт рынка" class="popup-target" data-poup-id="market">
+                <img src="./images/running-tom.png" alt="Концепт бегущего Тома" class="popup-target" data-poup-id="running">
+                <img src="./images/zombies.png" alt="Концепт боя с зомби" class="popup-target" data-poup-id="zombies">
+            </div>
+        </div>
+    </section>
+    <div id="office-popup" class="dd-popup">
+        <span class="close">&times;</span>
+        <img src="images/office.png" class="popup-image">
+    </div>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Контакты</h2>
+            <ul>
+                <li><a href="https://t.me/deepdebugging" target="_blank">
+                    <img src="./images/telegram.ico" alt="Иконка Телеграм" class="icon">Телеграм: https://t.me/deepdebugging
+                </a></li>
+                <li><a href="mailto:j@deepdebugging.world" target="_blank">
+                    <img src="./images/email.ico" alt="Иконка Email" class="icon">Email: j@deepdebugging.world
+                </a></li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Авторские права © 2024 Глубокая Отладка - Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="./popup.js"></script>
+    <script>
+        document.querySelector('.dropbtn').addEventListener('click', function() {
+            document.querySelector('.dropdown-content').classList.toggle('show');
+        });
+
+        // Закрытие выпадающего меню, если пользователь кликает вне его
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn') && !event.target.matches('.globe-icon')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+/* Global Styles */
+/*
+pink #f93578
+blue #3cfafe
+yellow #fbfd02
+*/
+
+body {
+    background-color: #282828;
+    background-image: url("./images/bg.png");
+    background-size: cover; /* Масштабирует изображение так, чтобы оно покрывало весь фон */
+    background-position: center; /* Центрирует фоновое изображение */
+    background-repeat: no-repeat; /* Запрещает повторение изображения */
+    background-attachment: fixed; /* Фиксирует изображение, чтобы оно не двигалось при прокрутке */
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: "Contrail One", sans-serif;
+}
+
+.navbar {
+    background-color: #282828; /* Dark background for the navbar */
+    position: sticky; /* Makes the navbar stick to the top of the page */
+    top: 0; /* Positions the navbar at the top */
+    width: 100%; /* Full width of the page */
+    z-index: 1000; /* Ensures the navbar is above other content */
+    padding: 10px 20px; /* Padding for navbar */
+    box-shadow: 0 2px 4px rgba(31, 8, 167, 0.5); /* Subtle shadow */
+    
+    display: flex;
+    justify-content: center; /* Center all items */
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping of items */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Ensures spacing between links and dropdown */
+    align-items: center; /* Aligns items vertically centered */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.nav-links {
+    list-style-type: none; /* Removes bullet points */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center items */
+    align-items: center;
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+    flex-grow: 1; /* Allows nav-links to take up available space */
+}
+
+.nav-links li {
+    margin: 0 15px; /* Margin between links */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.nav-links a {
+    text-decoration: none; /* Removes underline from links */
+    color: #f93578; /* Pink text color */
+    font-size: 1.1em; /* Font size for links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover {
+    color: #00FFFF; /* Color change on hover */
+}
+
+.language-dropdown {
+    position: relative;
+    display: inline-block; /* Align with other elements */
+    margin-left: 15px; /* Space from the last nav item */
+}
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center; /* Aligns icon properly */
+}
+
+.globe-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #282828;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: #FFFFFF;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #00FFFF;
+}
+
+.flag-icon {
+    width: 24px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.active {
+    background-color: #FF69B4; /* Highlight the active locale */
+}
+
+.show {
+    display: block; /* Show the dropdown content */
+}
+
+.logo {
+    max-width: 400px;
+    max-height: 400px;
+}
+
+a {
+    color: #FF69B4;
+    text-decoration: none;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+ul li a:hover {
+    color: #00FFFF; /* Change color on hover */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #00FFFF;
+}
+
+header p {
+    font-size: 1.2em;
+    font-weight: 100;
+    color: #09fefc;
+}
+
+.section {
+    padding: 40px 0;
+}
+
+.section h2 {
+    color: #FFFF00;
+    text-align: center;
+    font-family: "Contrail One", sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#about {
+    position: relative; /* Establishes a positioning context for the pseudo-element */
+    background-image: url("./images/about-bg.png");
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    color: #FFFFFF; /* Ensures text is visible over the dark overlay */
+    padding: 40px 0; /* Padding for section spacing */
+    z-index: 1; /* Stacks the section above other elements (if needed) */
+    box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5); /* Subtle shadow */
+}
+
+#about::before {
+    content: ''; /* Necessary to display the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(249, 53, 120, 0.5); /* Dark overlay with 50% opacity */
+    z-index: -1; /* Stacks the overlay behind the content */
+}
+
+#characters {
+    padding: 40px 0; /* Padding for spacing */
+    color: #FFFFFF; /* Text color for readability */
+}
+
+#characters h2 {
+    text-align: center; /* Center the heading */
+    font-size: 2.5em; /* Font size for the heading */
+    margin-bottom: 30px; /* Space below the heading */
+    color: #FFFF00; /* Color for the heading */
+}
+
+.character-gallery {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-around; /* Space between items */
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+    gap: 20px; /* Space between character cards */
+}
+
+.character-card {
+    background-color: #333333; /* Background color for character cards */
+    border-radius: 10px; /* Rounded corners */
+    width: 200px; /* Fixed width for cards */
+    text-align: center; /* Center content */
+    box-shadow: 0 0 12px rgba(31, 8, 167, 0.2); /* Subtle shadow */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    transition: transform 0.3s ease;
+}
+
+.popup-target {
+    cursor: pointer;
+}
+
+/* TODO fix*/
+.dd-popup{
+    max-width: 90%;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(31, 8, 167, 0.5);
+}
+
+.character-image {
+    width: 100%; /* Image fills card width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensure image covers entire area */
+}
+
+.character-description {
+    padding: 15px; /* Padding inside the description */
+}
+
+.character-description h3 {
+    margin: 10px 0; /* Space above and below the name */
+    font-size: 1.4em; /* Font size for character names */
+    color: #FF69B4; /* Color for the character name */
+}
+
+.character-description p {
+    margin: 0; /* No margin for paragraph */
+    font-size: 1em; /* Font size for description */
+    color: #DDDDDD; /* Color for the description text */
+}
+/* 
+.character {
+    background-color: #282828;
+    border-radius: 10px;
+    width: 200px;
+    margin: 20px;
+    box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.character:hover {
+    transform: scale(1.05);
+} */
+
+.dd-popup {
+    display: none; /* Hide popups by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    z-index: 1001; /* Above the navbar */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    max-width: 500px;
+    color: #FFFFFF;
+    box-shadow: 0 8px 16px rgba(31, 8, 167, 0.3);
+}
+
+.popup-content img {
+    width: 100%; /* Full width of the content box */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.popup-content h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #FFFF00; /* Highlighted text color */
+    font-size: 1.8em;
+}
+
+.popup-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.close {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    color: #FFFFFF;
+    background-color: #f93578;
+    border-radius: 50%;
+    font-size: 66px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    width: 50px;
+    height: 50px;
+    line-height: 54px;
+}
+
+.close:hover {
+    color: #FF69B4; /* Highlight close button on hover */
+}
+
+/* .episode {
+    background-color: #282828;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+} */
+
+#episodes {
+    box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5); /* Subtle shadow */
+    position: relative; /* Establishes a positioning context for the pseudo-element */
+    background-image: url("./images/episodes-bg.png");
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+    color: #FFFFFF; /* Ensures text is visible over the dark overlay */
+    padding: 40px 0; /* Padding for section spacing */
+    z-index: 1; /* Stacks the section above other elements (if needed) */
+}
+
+#episodes::before {
+    content: ''; /* Necessary to display the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(249, 53, 120, 0.5); /* Dark overlay with 50% opacity */
+    z-index: -1; /* Stacks the overlay behind the content */
+}
+.episode {
+    display: flex; /* Use flexbox to arrange items horizontally */
+    align-items: flex-start; /* Align items to the top */
+    background-color: #282828; /* Background color for episode block */
+    padding: 20px; /* Padding for spacing */
+    margin-bottom: 20px; /* Space between episode blocks */
+    border-radius: 5px; /* Rounded corners */
+    /* box-shadow: 0 0 6px rgba(31, 8, 167, 0.5); */
+}
+
+.episode-image {
+    width: 120px; /* Width of the square image */
+    height: 120px; /* Height of the square image */
+    margin-right: 20px; /* Space between the image and text */
+    border-radius: 5px; /* Optional: Rounded corners for the image */
+    object-fit: cover; /* Ensure the image covers the entire area */
+}
+
+.episode-content {
+    flex: 1; /* Allow the content to take up remaining space */
+    color: #FFFFFF; /* Text color for readability */
+}
+
+.episode-content h3 {
+    margin-top: 0; /* Remove top margin for heading */
+    margin-bottom: 10px; /* Space between heading and paragraph */
+    color: #3cfafe; /* Heading color */
+    font-size: 1.8em; /* Heading font size */
+}
+
+.episode-content p {
+    margin: 0; /* Remove margin for paragraph */
+    font-size: 1.1em; /* Font size for paragraph */
+    line-height: 1.5; /* Line height for readability */
+}
+
+/* #gallery {
+    background-color: #282828;
+} */
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(31, 8, 167, 0.5);
+}
+
+#contact {
+    background-color: #535d7f;
+    box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5); /* Subtle shadow */
+}
+
+#contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #282828;
+    text-align: center;
+    padding: 20px 0;
+    color: #8b8b8b;
+}
+
+footer p {
+    margin: 5px 0;
+}
