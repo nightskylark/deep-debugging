@@ -1,4 +1,3 @@
-/* Global Styles */
 /*
 pink #f93578
 blue #3cfafe
@@ -8,72 +7,88 @@ yellow #fbfd02
 body {
     background-color: #282828;
     background-image: url("./images/bg.png");
-    background-size: cover; /* Масштабирует изображение так, чтобы оно покрывало весь фон */
-    background-position: center; /* Центрирует фоновое изображение */
-    background-repeat: no-repeat; /* Запрещает повторение изображения */
-    background-attachment: fixed; /* Фиксирует изображение, чтобы оно не двигалось при прокрутке */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #FFFFFF;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    font-family: sans-serif;
+
+    width: 100vw;
+    overflow-x: hidden;
+}
+h1, h2, h3 {
     font-family: "Contrail One", sans-serif;
 }
 
 .navbar {
-    background-color: #282828; /* Dark background for the navbar */
-    position: sticky; /* Makes the navbar stick to the top of the page */
-    top: 0; /* Positions the navbar at the top */
-    width: 100%; /* Full width of the page */
-    z-index: 1000; /* Ensures the navbar is above other content */
-    padding: 10px 20px; /* Padding for navbar */
-    box-shadow: 0 2px 4px rgba(31, 8, 167, 0.5); /* Subtle shadow */
+    background-color: #282828;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(31, 8, 167, 0.5);
     
     display: flex;
-    justify-content: center; /* Center all items */
     align-items: center;
-    flex-wrap: nowrap; /* Prevent wrapping of items */
+    flex-wrap: nowrap;
+
+    justify-content: space-between;
 }
 
 .container {
-    display: flex;
-    justify-content: space-between; /* Ensures spacing between links and dropdown */
-    align-items: center; /* Aligns items vertically centered */
-    width: 100%;
-    max-width: 1200px;
+    display: block;
+    /* width: 90%; */
+    /* max-width: 1200px; */
     margin: 0 auto;
-    padding: 0;
+    padding: 20px;
+
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    font-family: "Contrail One", sans-serif;
 }
 
 .nav-links {
-    list-style-type: none; /* Removes bullet points */
-    display: flex; /* Use flexbox for horizontal layout */
-    justify-content: center; /* Center items */
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin: 0; /* No margin */
-    padding: 0; /* No padding */
-    flex-grow: 1; /* Allows nav-links to take up available space */
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
 }
 
 .nav-links li {
-    margin: 0 15px; /* Margin between links */
-    white-space: nowrap; /* Prevent text wrapping */
+    margin: 0 15px;
+    white-space: nowrap;
 }
 
 .nav-links a {
-    text-decoration: none; /* Removes underline from links */
-    color: #f93578; /* Pink text color */
-    font-size: 1.1em; /* Font size for links */
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    text-decoration: none;
+    color: #f93578;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #00FFFF; /* Color change on hover */
+    color: #00FFFF;
 }
 
 .language-dropdown {
     position: relative;
-    display: inline-block; /* Align with other elements */
-    margin-left: 15px; /* Space from the last nav item */
+    display: inline-block;
+    margin-left: 15px;
 }
 
 .dropbtn {
@@ -82,7 +97,7 @@ body {
     cursor: pointer;
     padding: 5px;
     display: flex;
-    align-items: center; /* Aligns icon properly */
+    align-items: center;
 }
 
 .globe-icon {
@@ -122,23 +137,29 @@ body {
 }
 
 .active {
-    background-color: #FF69B4; /* Highlight the active locale */
+    background-color: #FF69B4;
 }
 
 .show {
-    display: block; /* Show the dropdown content */
+    display: block;
 }
 
 .logo {
     max-width: 400px;
-    max-height: 400px;
+    /* max-height: 400px; */
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
 a {
     color: #FF69B4;
     text-decoration: none;
 }
+a:hover {
+    color: #09fefc;
 
+}
 .icon {
     width: 24px;
     height: 24px;
@@ -147,17 +168,8 @@ a {
 }
 
 ul li a:hover {
-    color: #00FFFF; /* Change color on hover */
+    color: #00FFFF;
 }
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-
 
 header {
     text-align: center;
@@ -173,10 +185,12 @@ header p {
     font-size: 1.2em;
     font-weight: 100;
     color: #09fefc;
+    font-family: "Contrail One", sans-serif;
 }
 
 .section {
     padding: 40px 0;
+    display: block;
 }
 
 .section h2 {
@@ -188,53 +202,81 @@ header p {
 }
 
 #about {
-    position: relative; /* Establishes a positioning context for the pseudo-element */
+    position: relative;
     background-image: url("./images/about-bg.png");
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the background image */
-    color: #FFFFFF; /* Ensures text is visible over the dark overlay */
-    padding: 40px 0; /* Padding for section spacing */
-    z-index: 1; /* Stacks the section above other elements (if needed) */
-    box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5); /* Subtle shadow */
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 40px 0;
+    z-index: 1;
+    box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5);
+    text-align: center;
 }
 
 #about::before {
-    content: ''; /* Necessary to display the pseudo-element */
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(249, 53, 120, 0.5); /* Dark overlay with 50% opacity */
-    z-index: -1; /* Stacks the overlay behind the content */
+    background-color: rgba(249, 53, 120, 0.5);
+    z-index: -1;
+}
+
+#about .container {
+    margin: 0;
+}
+
+#about .about-card {
+    /* display: flex-wrap; */
+    border-radius: 20px;
+    max-width: 400px;
+    min-height: 300px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #333333;
+    text-align: justify;
+}
+
+#about .about-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#about h3 {
+    text-align: center;
+    color: #09fefc;
 }
 
 #characters {
-    padding: 40px 0; /* Padding for spacing */
-    color: #FFFFFF; /* Text color for readability */
+    padding: 40px 0;
+    color: #FFFFFF;
+    display: block;
 }
 
 #characters h2 {
-    text-align: center; /* Center the heading */
-    font-size: 2.5em; /* Font size for the heading */
-    margin-bottom: 30px; /* Space below the heading */
-    color: #FFFF00; /* Color for the heading */
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #FFFF00;
 }
 
 .character-gallery {
-    display: flex; /* Flexbox for layout */
-    justify-content: space-around; /* Space between items */
-    flex-wrap: wrap; /* Wrap items on smaller screens */
-    gap: 20px; /* Space between character cards */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .character-card {
-    background-color: #333333; /* Background color for character cards */
-    border-radius: 10px; /* Rounded corners */
-    width: 200px; /* Fixed width for cards */
-    text-align: center; /* Center content */
-    box-shadow: 0 0 12px rgba(31, 8, 167, 0.2); /* Subtle shadow */
-    overflow: hidden; /* Ensure content doesn't overflow */
+    background-color: #333333;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(31, 8, 167, 0.2);
+    overflow: hidden;
     transition: transform 0.3s ease;
 }
 
@@ -242,10 +284,9 @@ header p {
     cursor: pointer;
 }
 
-/* TODO fix*/
-.dd-popup{
+/* .dd-popup{
     max-width: 90%;
-}
+} */
 
 .character-card:hover {
     transform: scale(1.05);
@@ -253,170 +294,149 @@ header p {
 }
 
 .character-image {
-    width: 100%; /* Image fills card width */
-    height: 200px; /* Fixed height */
-    object-fit: cover; /* Ensure image covers entire area */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .character-description {
-    padding: 15px; /* Padding inside the description */
+    padding: 15px;
 }
 
 .character-description h3 {
-    margin: 10px 0; /* Space above and below the name */
-    font-size: 1.4em; /* Font size for character names */
-    color: #FF69B4; /* Color for the character name */
+    margin: 10px 0;
+    font-size: 1.4em;
+    color: #FF69B4;
 }
 
 .character-description p {
-    margin: 0; /* No margin for paragraph */
-    font-size: 1em; /* Font size for description */
-    color: #DDDDDD; /* Color for the description text */
+    margin: 0;
+    font-size: 1em;
+    color: #DDDDDD;
 }
-/* 
-.character {
-    background-color: #282828;
-    border-radius: 10px;
-    width: 200px;
-    margin: 20px;
-    box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5);
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.character:hover {
-    transform: scale(1.05);
-} */
 
 .dd-popup {
-    display: none; /* Hide popups by default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
-    z-index: 1001; /* Above the navbar */
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1001;
     justify-content: center;
     align-items: center;
 }
 
 .popup-content {
     background-color: #282828;
-    padding: 20px;
     border-radius: 10px;
     text-align: center;
     position: relative;
     max-width: 500px;
     color: #FFFFFF;
-    box-shadow: 0 8px 16px rgba(31, 8, 167, 0.3);
+    box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5);
 }
 
 .popup-content img {
-    width: 100%; /* Full width of the content box */
-    border-radius: 10px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
     margin-bottom: 20px;
 }
 
 .popup-content h3 {
     margin: 0;
     margin-bottom: 10px;
-    color: #FFFF00; /* Highlighted text color */
+    color: #FFFF00;
     font-size: 1.8em;
 }
 
 .popup-content p {
     font-size: 1.1em;
     line-height: 1.5;
+    padding: 0 20px;
+    text-align: justify;
 }
 
 .close {
+    font-family: "Contrail One", sans-serif;
     position: absolute;
-    top: -25px;
-    right: -25px;
+    top: 0;
+    right: 0;
     color: #FFFFFF;
     background-color: #f93578;
-    border-radius: 50%;
+    border-radius: 0 20% 0 20%;
     font-size: 66px;
     cursor: pointer;
     transition: color 0.3s ease;
     width: 50px;
     height: 50px;
     line-height: 54px;
+    text-align: center;
+    z-index: 1000;
 }
 
 .close:hover {
-    color: #FF69B4; /* Highlight close button on hover */
+    color: #FF69B4;
 }
 
-/* .episode {
-    background-color: #282828;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-} */
-
 #episodes {
-    box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5); /* Subtle shadow */
-    position: relative; /* Establishes a positioning context for the pseudo-element */
+    box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5);
+    position: relative;
     background-image: url("./images/episodes-bg.png");
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the background image */
-    color: #FFFFFF; /* Ensures text is visible over the dark overlay */
-    padding: 40px 0; /* Padding for section spacing */
-    z-index: 1; /* Stacks the section above other elements (if needed) */
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 40px 0;
+    z-index: 1;
+    display: block;
 }
 
 #episodes::before {
-    content: ''; /* Necessary to display the pseudo-element */
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(249, 53, 120, 0.5); /* Dark overlay with 50% opacity */
-    z-index: -1; /* Stacks the overlay behind the content */
+    background-color: rgba(249, 53, 120, 0.5);
+    z-index: -1;
 }
+
 .episode {
-    display: flex; /* Use flexbox to arrange items horizontally */
-    align-items: flex-start; /* Align items to the top */
-    background-color: #282828; /* Background color for episode block */
-    padding: 20px; /* Padding for spacing */
-    margin-bottom: 20px; /* Space between episode blocks */
-    border-radius: 5px; /* Rounded corners */
-    /* box-shadow: 0 0 6px rgba(31, 8, 167, 0.5); */
+    display: flex;
+    align-items: flex-start;
+    background-color: #282828;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 .episode-image {
-    width: 120px; /* Width of the square image */
-    height: 120px; /* Height of the square image */
-    margin-right: 20px; /* Space between the image and text */
-    border-radius: 5px; /* Optional: Rounded corners for the image */
-    object-fit: cover; /* Ensure the image covers the entire area */
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+    border-radius: 5px;
+    object-fit: cover;
 }
 
 .episode-content {
-    flex: 1; /* Allow the content to take up remaining space */
-    color: #FFFFFF; /* Text color for readability */
+    flex: 1;
+    color: #FFFFFF;
 }
 
 .episode-content h3 {
-    margin-top: 0; /* Remove top margin for heading */
-    margin-bottom: 10px; /* Space between heading and paragraph */
-    color: #3cfafe; /* Heading color */
-    font-size: 1.8em; /* Heading font size */
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #3cfafe;
+    font-size: 1.8em;
 }
 
 .episode-content p {
-    margin: 0; /* Remove margin for paragraph */
-    font-size: 1.1em; /* Font size for paragraph */
-    line-height: 1.5; /* Line height for readability */
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.5;
 }
-
-/* #gallery {
-    background-color: #282828;
-} */
 
 .gallery {
     display: flex;
@@ -432,6 +452,9 @@ header p {
     cursor: pointer;
     transition: transform 0.3s ease;
 }
+.gallery-content {
+    max-width: 100%;
+}
 
 .gallery img:hover {
     transform: scale(1.05);
@@ -440,7 +463,8 @@ header p {
 
 #contact {
     background-color: #535d7f;
-    box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5); /* Subtle shadow */
+    box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5);
+    display: block;
 }
 
 #contact ul {
@@ -457,6 +481,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     color: #8b8b8b;
+    display: block;
 }
 
 footer p {
