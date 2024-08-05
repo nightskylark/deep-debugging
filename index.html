@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep Debugging</title>
+    <title>DEEP DEBUGGING Animated Serie</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,8 +34,7 @@
     
     <header>
         <div class="container">
-            <img class="logo" src="./images/logo.png">
-            <!-- <h1>Deep Debugging</h1> -->
+            <img class="logo" src="./images/logo.png" alt="DEEP DEBUGGING. You are not your code.">
             <p>Welcome to the Official Website of Deep Debugging Animated Series</p>
         </div>
     </header>
@@ -43,8 +42,25 @@
     <section id="about" class="section">
         <div class="container">
             <h2>About the Show</h2>
-            <p><strong>Introduction:</strong> <em>Deep Debugging</em> is an adult animated comedy series that dives into the chaotic and humorous world of developers working on a simulation of our universe. Follow the antics of a quirky team as they navigate through digital glitches, unexpected bugs, and the everyday absurdities of debugging.</p>
-            <p><strong>Plot:</strong> In a world where every line of code can lead to chaos, <em>Deep Debugging</em> takes you on a rollercoaster ride through a simulated universe that’s more unpredictable than reality itself. Our heroes venture into the simulation to fix bugs, only to find themselves caught in hilarious situations that challenge their coding skills and sanity.</p>
+            <div class="about-cards">
+                <div class="about-card">
+                    <h3>Introduction</h3>
+                    <p><em>Deep Debugging</em> is an adult animated comedy series that dives into the chaotic and humorous world of developers working on a simulation of our universe.</p>
+                    <p>Follow the antics of a quirky team as they navigate through digital glitches, unexpected bugs, and the everyday absurdities of debugging.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Plot</h3>
+                    <p>In a world where every line of code can lead to chaos, <em>Deep Debugging</em> takes you on a rollercoaster ride through a simulated universe that’s more unpredictable than reality itself.</p>
+                        
+                    <p>Our heroes venture into the simulation to fix bugs, only to find themselves caught in hilarious situations that challenge their coding skills and sanity.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Current state</h3>
+                    <p><em>Deep Debugging</em> is currently in development!</p>
+                    <p>To stay updated on our progress, join our official Telegram channel. Here, you'll get the latest news, sneak peeks, and exclusive content. Don't miss out on any updates!</p>
+                    <p>Join us on Telegram: <a href="https://t.me/deepdebugging" target="_blank">Deep Debugging Telegram Channel</a></p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -194,7 +210,7 @@
                     <h3>Episode 1: First Commit</h3>
                     <p>A young and inexperienced programmer, J, dives into a computer simulation of our world to locate the patient zero of a computer virus threatening humanity, all while trying to fix his mistake and avoid getting fired on his first day.</p>
                 </div>
-            </div>            
+            </div>      
         </div>
     </section>
 
@@ -212,8 +228,25 @@
     </section>
     <div id="office-popup" class="dd-popup">
         <span class="close">&times;</span>
-        <img src="images/office.png" class="popup-image">
+        <img src="images/office.png" alt="UniDev Office Concept" class="popup-content gallery-content">
     </div>
+    <div id="dd-room-popup" class="dd-popup">
+        <span class="close">&times;</span>
+        <img src="./images/dd-room.png" alt="Deep Debugging Room Concept" class="popup-content gallery-content">
+    </div>
+    <div id="market-popup" class="dd-popup">
+        <span class="close">&times;</span>
+        <img src="./images/market.png" alt="Market Concept" class="popup-content gallery-content">
+    </div>
+    <div id="running-popup" class="dd-popup">
+        <span class="close">&times;</span>
+        <img src="./images/running-tom.png" alt="Running Tom Concept" class="popup-content gallery-content">
+    </div>
+    <div id="zombies-popup" class="dd-popup">
+        <span class="close">&times;</span>
+        <img src="./images/zombies.png" alt="Zombies Fight Concept" class="popup-content gallery-content">
+    </div>
+
 
     <section id="contact" class="section">
         <div class="container">
@@ -236,35 +269,6 @@
     </footer>
 
     <script src="./popup.js"></script>
-    <script>
-        document.querySelector('.dropbtn').addEventListener('click', function() {
-            document.querySelector('.dropdown-content').classList.toggle('show');
-        });
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn') && !event.target.matches('.globe-icon')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-        // // JavaScript for closing dropdown when clicking outside
-        // window.onclick = function(event) {
-        //     if (!event.target.matches('.dropbtn')) {
-        //         var dropdowns = document.getElementsByClassName("dropdown-content");
-        //         for (var i = 0; i < dropdowns.length; i++) {
-        //             var openDropdown = dropdowns[i];
-        //             if (openDropdown.classList.contains('show')) {
-        //                 openDropdown.classList.remove('show');
-        //             }
-        //         }
-        //     }
-        // }
-    </script>
+    <script src="./dropdown.js"></script>
 </body>
 </html>
