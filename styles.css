@@ -153,23 +153,24 @@ h1, h2, h3 {
 }
 
 a {
-    color: #FF69B4;
+    color: #09fefc;
     text-decoration: none;
 }
 a:hover {
-    color: #09fefc;
+    color: #FF69B4;
 
 }
 .icon {
-    width: 24px;
-    height: 24px;
+    width: 96px;
+    height: 96px;
     vertical-align: middle;
-    margin-right: 8px;
+    margin: 20px;
+    user-select: none;
 }
 
-ul li a:hover {
+/* ul li a:hover {
     color: #00FFFF;
-}
+} */
 
 header {
     text-align: center;
@@ -462,7 +463,7 @@ header p {
 }
 
 #contact {
-    background-color: #535d7f;
+    background-color: #87193e;;
     box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5);
     display: block;
 }
@@ -470,10 +471,31 @@ header p {
 #contact ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-around;
+    align-items: flex-start;
 }
 
 #contact ul li {
-    margin-bottom: 10px;
+    width: 350px;
+    margin: 10px;
+    min-height: 200px;
+}
+
+#contact ul li a {
+    padding: 15px;
+    background-color: #282828;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact ul li a:hover {
+    transform: scale(1.05);
 }
 
 footer {
