@@ -24,6 +24,27 @@ h1, h2, h3 {
     font-family: "Contrail One", sans-serif;
 }
 
+#bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
+}
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* ← степень затемнения */
+  z-index: -1;
+}
+
 .navbar {
     background-color: #282828;
     position: sticky;
@@ -204,7 +225,6 @@ header p {
 
 #about {
     position: relative;
-    background-image: url("./images/about-bg.png");
     background-size: cover;
     background-position: center;
     color: #FFFFFF;
@@ -384,13 +404,16 @@ header p {
 #episodes {
     box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5);
     position: relative;
-    background-image: url("./images/episodes-bg.png");
+    /* background-image: url("./images/episodes-bg.png"); */
+
+    background-image: url("./images/about-bg.png");
     background-size: cover;
     background-position: center;
     color: #FFFFFF;
     padding: 40px 0;
     z-index: 1;
-    display: block;
+    display: flex;
+    align-items: center;
 }
 
 #episodes::before {
@@ -411,6 +434,7 @@ header p {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
+    max-width: 1000px;
 }
 
 .episode-image {
@@ -463,9 +487,10 @@ header p {
 }
 
 #contact {
-    background-color: #87193e;;
+    /* background-color: #87193e; */
     box-shadow: 0 1px 10px rgba(31, 8, 167, 0.5);
     display: block;
+    background-color: rgba(249, 53, 120, 0.5);
 }
 
 #contact ul {
